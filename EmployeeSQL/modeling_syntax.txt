@@ -1,0 +1,34 @@
+EMPLOYEES
+-
+Employee_No INTEGER PK
+Emp_Title VARCHAR FK  >-  Title.Emp_Title
+Birth_Date DATE
+First_Name VARCHAR
+Last_Name VARCHAR
+Sex VARCHAR 
+Hire_Date DATE
+
+SALARIES
+-
+Employee_No INTEGER PK FK >-  employees.Employee_No
+Salary INTEGER 
+
+TITLE
+-
+Emp_Title VARCHAR PK
+Title VARCHAR
+
+MANAGER
+-
+Employee_Number Integer PK FK >- employees.Employee_No
+Dept_No VARCHAR FK >- department.Dept_No
+
+LOCATION
+-
+Employee_Number Integer PK FK >- employees.Employee_No
+Dept_No VARCHAR FK >- department.Dept_No
+
+DEPARTMENT
+-
+Dept_No VARCHAR PK
+Dept_Name VARCAR
